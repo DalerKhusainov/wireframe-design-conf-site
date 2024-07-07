@@ -9,17 +9,17 @@ function App() {
   return (
     <>
       <div
-        className={`bg-[url('./assets/background-images/bg-image-hero.png')] bg-center bg-no-repeat bg-cover h-full`}
+        className={`bg-[url('./assets/background-images/bg-image-hero.png')] bg-left mobile:bg-center bg-no-repeat bg-cover h-full`}
       >
-        <header className=" max-w-[1184px] pt-10 mobile:pt-20 px-8 mobile:px-16 mx-auto">
+        <header className=" max-w-[1184px] pt-10 mobile:pt-20 px-4 mobile:px-16 mx-auto">
           <NavBar />
         </header>
-        <div className="max-w-[1184px] mx-auto px-8 mobile:px-16">
+        <div className="max-w-[1184px] mx-auto px-4 mobile:px-16">
           <Hero />
           <Speakers />
         </div>
       </div>
-      <div className="mx-auto max-w-[1184px] px-8 mobile:px-16">
+      <div className="mx-auto max-w-[1184px] px-4 mobile:px-16">
         <Schedule />
         <SubscribeForUpdates />
         <Footer />

@@ -124,10 +124,10 @@ function Speakers() {
   return (
     <section className="mb-[130px]">
       <div>
-        <h2 className="mb-6 text-3xl font-bold text-purple font-roboto">
+        <h2 className="mb-6 text-2xl font-bold mobile:text-3xl text-purple font-roboto">
           Speakers
         </h2>
-        <p className="text-xl font-medium mb-[92px] font-inter text-slate text-pretty">
+        <p className="mobile:text-xl text-lg font-medium mb-[92px] font-inter text-slate text-pretty">
           We’re inviting the top creatives in the tech industry from all the
           world to come learn, grow, scrape their knees, try new things, to be
           vulnerable, and to have epic adventures together, this time both
@@ -135,24 +135,24 @@ function Speakers() {
         </p>
       </div>
       {/* Speakers and Days of Event */}
-      <div className="flex justify-between">
+      <div className="flex flex-col tablet:flex-row mobile:justify-between">
         {/* Days */}
-        <div className="w-[22%] space-y-6">
+        <div className="grid grid-cols-3 gap-4 mb-12 tablet:gap-0 tablet:flex tablet:flex-col tablet:w-[22%] tablet:space-y-6">
           <button
             onClick={() => setDay("1")}
-            className={`flex flex-col items-start w-full border-b-2 ${
+            className={`flex flex-col items-center mobile:items-start w-full border-b-2 ${
               day === "1" ? "border-b-purple" : "border-b-purple/10"
             }`}
           >
             <span
-              className={`text-sm font-semibold ${
+              className={`mobile:text-sm text-xs font-semibold ${
                 day === "1" ? "text-purple" : "text-slate"
               } font-inter`}
             >
               Day 1
             </span>
             <span
-              className={`mb-4 text-xl ${
+              className={`mb-4 text-sm mobile:text-xl ${
                 day === "1" ? "text-purple" : "text-slate"
               } font-inter`}
             >
@@ -161,19 +161,19 @@ function Speakers() {
           </button>
           <button
             onClick={() => setDay("2")}
-            className={`flex flex-col items-start w-full border-b-2 ${
+            className={`flex flex-col items-center mobile:items-start w-full border-b-2 ${
               day === "2" ? "border-b-purple" : "border-b-purple/10"
             }`}
           >
             <span
-              className={`text-sm font-semibold ${
+              className={`mobile:text-sm text-xs font-semibold ${
                 day === "2" ? "text-purple" : "text-slate"
               } font-inter`}
             >
               Day 2
             </span>
             <span
-              className={`mb-4 text-xl ${
+              className={`mb-4 text-sm mobile:text-xl ${
                 day === "2" ? "text-purple" : "text-slate"
               } font-inter`}
             >
@@ -182,19 +182,19 @@ function Speakers() {
           </button>
           <button
             onClick={() => setDay("3")}
-            className={`flex flex-col items-start w-full border-b-2 ${
+            className={`flex flex-col items-center mobile:items-start w-full border-b-2 ${
               day === "3" ? "border-b-purple" : "border-b-purple/10"
             }`}
           >
             <span
-              className={`text-sm font-semibold ${
+              className={`mobile:text-sm text-xs font-semibold ${
                 day === "3" ? "text-purple" : "text-slate"
               } font-inter`}
             >
               Day 3
             </span>
             <span
-              className={`mb-4 text-xl ${
+              className={`mb-4 text-sm mobile:text-xl ${
                 day === "3" ? "text-purple" : "text-slate"
               } font-inter`}
             >
@@ -203,10 +203,10 @@ function Speakers() {
           </button>
         </div>
         {/* Speakers */}
-        <div className="grid grid-cols-3 gap-4 w-[75%]">
+        <div className="grid grid-cols-2 mobile:grid-cols-3 w-full gap-x-4 gap-y-10 tablet:w-[75%]">
           {daysOfSpeakers[day].map((speaker) => (
             <div>
-              <div className="mb-6 aspect-w-3 aspect-h-3">
+              <div className="mb-2 aspect-w-3 aspect-h-3">
                 <img
                   src={speaker.imageUrl}
                   className="object-cover w-full h-full saturate-0"
